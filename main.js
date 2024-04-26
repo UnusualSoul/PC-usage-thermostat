@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let whiteSpace = document.getElementById('white-space');
   const redBar = document.getElementById('red-bar');
   let submitButton = document.getElementById('countButton');
+  let resetButton = document.getElementById('reset');
 
   submitButton.addEventListener('click', function() {
     let userInput = document.getElementById('userInput').value;
@@ -10,12 +11,23 @@ document.addEventListener('DOMContentLoaded', function() {
     startCountdown(seconds);
   })
 
+  resetButton.addEventListener('click', function() {
+    resetCountDown();
+  })  
+
+  // start countdown 
   function startCountdown(seconds) {
     // this is javascript manipulating the css style transition 
     // which is a shorthand for transition-property, transition-duration, and transition-timing-function)
     // which in the line below are separated by spaces 
     redBar.style.transition = "height " + seconds + "s linear";
     redBar.style.height = whiteSpace.offsetHeight + "px";
+  }
+
+  // reset countdown 
+  function resetCountDown() {
+    redBar.style.transition = 'none';
+    redBar.style.height = '1%';
   }
 });
 
