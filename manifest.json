@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "PC usage thermostat",
+  "version": "0.0.1",
+  "description": "PC Usage thermostat",
+  "author": "shundayo.131@gmail.com",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "main.html",
+    "default_icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_title": "Tracking your PC usage time!"
+  }
+}
