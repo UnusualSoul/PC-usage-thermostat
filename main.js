@@ -41,17 +41,7 @@ function resetCountDown() {
   redBar.style.height = '1%';
 }
 
-function addMinutes(seconds) {
-  if(seconds)
-    return Date.now() + seconds*1000;
-  else
-    return Date.now() + 1000 // one minute;
-}
 
-//time
-function calculateTimeRemaining(endTime){
-  return endTime - Date.now();
-}
 
 /*
 previous attempt to alert 
