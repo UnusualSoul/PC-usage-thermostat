@@ -33,33 +33,33 @@
     let firstTime10 = firstTime20 = firstTime30 = firstTime40 = true;
     let hitAgain = true;
     const interval = setInterval(() => {
-        if(!firstTime10)
-            hitAgain = false;
+        // if(!firstTime10)
+        //     hitAgain = false;
         
-        const timeRemaining = calculateTimeRemaining(endTime);
-        console.log(timeRemaining);//60000 / 10 = 54000
+        // const timeRemaining = calculateTimeRemaining(endTime);
+        // console.log(timeRemaining);//60000 / 10 = 54000
         
-        if((percent40 > timeRemaining && firstTime40) || hitAgain){
-            console.log("hit40")
-            firstTime40 = false;
-            hitAgain = true;
-        }
-        if((percent30 > timeRemaining && firstTime30) || hitAgain){
-            console.log("hit30")
-            firstTime30 = false;
-            hitAgain = true;
-        }
-        if((percent20 > timeRemaining && firstTime20) || hitAgain){
-            console.log("hit20")
-            firstTime20 = false;
-            hitAgain = true;
-        }
-        if((percent10 > timeRemaining && firstTime10) || hitAgain){
-            //run dom manip
-            console.log("hit10")
-            firstTime10 = false;
-            hitAgain = true;
-        }
+        // if((percent40 > timeRemaining && firstTime40) || hitAgain){
+        //     console.log("hit40")
+        //     firstTime40 = false;
+        //     hitAgain = true;
+        // }
+        // if((percent30 > timeRemaining && firstTime30) || hitAgain){
+        //     console.log("hit30")
+        //     firstTime30 = false;
+        //     hitAgain = true;
+        // }
+        // if((percent20 > timeRemaining && firstTime20) || hitAgain){
+        //     console.log("hit20")
+        //     firstTime20 = false;
+        //     hitAgain = true;
+        // }
+        // if((percent10 > timeRemaining && firstTime10) || hitAgain){
+        //     //run dom manip
+        //     console.log("hit10")
+        //     firstTime10 = false;
+        //     hitAgain = true;
+        // }
             
         //change images to outdoor images
 
@@ -78,13 +78,15 @@
             document.body.appendChild(newMessage);
             newMessage.innerText = "LETS GO OUTSIDEEEEEEE!!!";       
             console.log(newMessage); 
+            hit70 = true;
         }
         
         if (percent80 > timeRemaining && !hit80) {
             const newImage = document.createElement("img");
             newImage.src = "https://media.istockphoto.com/id/523761634/photo/cute-panda-bear-climbing-in-tree.jpg?s=612x612&w=0&k=20&c=TxsmORsbuY1LpxQsc6T8fpWJo7lBwncciYhroAr8rXI="; // Replace with your actual image URL
-            document.body.appendChild(newImage);
+            document.body.children[0].appendChild(newImage);
             console.log('image added'); 
+            hit80 = true;
         }
 
         if(timeRemaining <= 0)
