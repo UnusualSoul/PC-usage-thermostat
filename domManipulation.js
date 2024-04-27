@@ -25,35 +25,25 @@
     const percent90 = partialTime * 1;
     
     let hit50 = hit60 = false;
-    let hitAnother = [];
-    let timesHit = onItem = newNum = 0;
+    let hitArr = new Array(9);
 
     const interval = setInterval(() => {
         const timeRemaining = calculateTimeRemaining(endTime);
         console.log(timeRemaining);//60000 / 10 = 54000
-        if(percent10 > timeRemaining && onItem === 1){
-            if(timesHit <= newNum){
-                timesHit++;
-                //run dom manip
-
-            }
+        if(percent10 > timeRemaining){
+            //run dom manip
         }
+            
         if(percent20 > timeRemaining){
+            
         }
-        else
-            onItem--;
         if(percent30 > timeRemaining){
             
         }
-        else
-            onItem--;
 
         if(percent40 > timeRemaining){
             
         }
-        else
-            onItem--;
-
         //change images to outdoor images
 
         if (percent50 > timeRemaining && !hit50) {
@@ -64,6 +54,10 @@
         if (percent60 > timeRemaining && !hit60) {
             alert('60% time passed! Go outside!');
             hit60 = true;
+        }
+
+        if (percent70 > timeRemaining && !hit50) {
+            
         }
 
         if(timeRemaining <= 0)
