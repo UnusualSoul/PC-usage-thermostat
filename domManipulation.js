@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //     element.remove();   
     // }
 
-    const test = document.querySelector("div");
+    const test = document.querySelector("div#banner");
     const h1 = document.createElement("h1");
     h1.appendChild(test);
     h1.innerText = "LETS GOOOOOOOOOOOO!!!";
