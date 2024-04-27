@@ -75,7 +75,8 @@
 
         if (percent60 > timeRemaining && !hit60) {
             // alert('60% time passed! Go outside!');
-            const allSpan = document.cre
+            const allSpan = document.querySelectorAll('span');
+            allSpan.style.color = 'red';
             hit60 = true;
         }
 
