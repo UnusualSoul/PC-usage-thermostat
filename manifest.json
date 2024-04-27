@@ -17,7 +17,8 @@
   "content_scripts": [
     {
       "js": ["domManipulation.js"],
-      "matches": ["*/*"]
+      "matches": ["*://*/*"]
+      // "css": ["my-styles.css"],
     }
   ],
   "action": {
