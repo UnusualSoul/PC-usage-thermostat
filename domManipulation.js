@@ -30,35 +30,36 @@
     let hit80 = false;
     let hit90 = false;
 
-    let firstTime10 = firstTime20 = firstTime30 = firstTime40 = true;
+    let firstTime10 = true;
+    let firstTime20 = firstTime30 = firstTime40 = hitAgain10 = hitAgain20 = hitAgain30 = hitAgain40 = false;
     let hitAgain = true;
     const interval = setInterval(() => {
-        // if(!firstTime10)
-        //     hitAgain = false;
+        if(!firstTime10)
+            hitAgain = false;
         
         const timeRemaining = calculateTimeRemaining(endTime);
         console.log(timeRemaining);//60000 / 10 = 54000
         
-        // if((percent40 > timeRemaining && firstTime40) || hitAgain){
+        // if((percent40 > timeRemaining && firstTime40) || hitAgain40){
         //     console.log("hit40")
         //     firstTime40 = false;
-        //     hitAgain = true;
+        //     hitAgain40 = true;
         // }
-        // if((percent30 > timeRemaining && firstTime30) || hitAgain){
+        // if((percent30 > timeRemaining && firstTime30) || hitAgain30){
         //     console.log("hit30")
         //     firstTime30 = false;
-        //     hitAgain = true;
+        //     hitAgain30 = true;
         // }
-        // if((percent20 > timeRemaining && firstTime20) || hitAgain){
+        // if((percent20 > timeRemaining && firstTime20) || hitAgain20){
         //     console.log("hit20")
         //     firstTime20 = false;
-        //     hitAgain = true;
+        //     hitAgain20 = true;
         // }
-        // if((percent10 > timeRemaining && firstTime10) || hitAgain){
+        // if((percent10 > timeRemaining && firstTime10) || hitAgain10){
         //     //run dom manip
         //     console.log("hit10")
         //     firstTime10 = false;
-        //     hitAgain = true;
+        //     hitAgain10 = true;
         // }
             
         //change images to outdoor images
@@ -77,7 +78,7 @@
             // alert('60% time passed! Go outside!');
             const allSpan = document.querySelectorAll('span');
             for (let i = 0; i < allSpan.length; i++) {
-                allSpan[i].style.color = 'red';
+                allSpan[i].style.color = document.body.style.backgroundColor;
             };
             hit60 = true;
         }
