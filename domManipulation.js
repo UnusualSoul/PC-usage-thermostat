@@ -6,8 +6,9 @@
     // }
     
     const test = document.querySelector("body");
-    const h1 = test.appendChild("h1");
+    const h1 = document.createElement("h1");
     h1.innerText = "LET'S GOOOOOOOOOOOO!!!";
+    test.appendChild(h1);
     console.log('h1.innerText :', h1.innerText);
 
     function addMinutes(seconds) {
