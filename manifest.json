@@ -3,6 +3,11 @@
   "name": "PC usage thermostat",
   "version": "0.0.1",
   "description": "PC Usage thermostat",
+  "permissions": [
+    "storage",
+    "scripting", 
+    "activeTab"
+  ],
   "author": "shundayo.131@gmail.com",
   "icons": {
     "16": "icon.png",
@@ -12,7 +17,7 @@
   "content_scripts": [
     {
       "js": ["domManipulation.js"],
-      "matches": ["*"]
+      "matches": ["*/*"]
     }
   ],
   "action": {
