@@ -18,7 +18,6 @@
     {
       "js": ["domManipulation.js"],
       "matches": ["*://*/*"]
-      // "css": ["my-styles.css"],
     }
   ],
   "action": {
