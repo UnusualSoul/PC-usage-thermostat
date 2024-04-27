@@ -77,7 +77,7 @@
         if (percent60 > timeRemaining && !hit60) {
             // alert('60% time passed! Go outside!');
             const allElements = document.querySelectorAll('*');
-            for (let i = 0; i < allSpan.length; i++) {
+            for (let i = 0; i < allElements.length; i++) {
                 if(allElements[i].innerText)
                     allElements[i].style.color = document.body.style.backgroundColor;
             };
