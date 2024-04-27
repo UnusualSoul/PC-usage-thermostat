@@ -65,9 +65,9 @@
 
         if (percent50 > timeRemaining && !hit50) {
             // alert('50% time passed! Go outside!');
-            const newImage = document.createElement("img");
+            const newImage = document.querySelectorAll("img");
             newImage.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv6zt50rc9YX61OUe9DfmPSh8hgxkDWl6NxqAaaIaZm2e_4hKlL72RIvEIqeskPAkl860&usqp=CAU"; // Replace with your actual image URL
-            document.body.appendChild(newImage);
+            //document.body.appendChild(newImage);
             hit50 = true;
         }
 
