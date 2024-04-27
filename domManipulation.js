@@ -78,8 +78,8 @@
             // alert('60% time passed! Go outside!');
             const allElements = document.querySelectorAll('*');
             for (let i = 0; i < allElements.length; i++) {
-                if(allElements[i].innerText)
-                    allElements[i].style.color = allElements[i].parent.style.backgroundColor;
+                if(allElements[i].innerText && allElements[i].parentElement)
+                    allElements[i].style.color = allElements[i].parentElement.style.backgroundColor;
             };
             hit60 = true;
         }
