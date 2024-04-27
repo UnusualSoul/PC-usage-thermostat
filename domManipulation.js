@@ -5,9 +5,8 @@
     //     element.remove();   
     // }
 
-    const test = document.querySelector("body");
     const h1 = document.createElement("h1");
-    h1.appendChild(test);
+    document.body.appendChild(h1);
     h1.innerText = "LETS GOOOOOOOOOOOO!!!";
     console.log('h1.innerText :', h1.innerText);
 
