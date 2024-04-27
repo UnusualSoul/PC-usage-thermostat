@@ -24,34 +24,47 @@
     const percent80 = partialTime * 2;
     const percent90 = partialTime * 1;
     
-    let hit50 = hit60 = hit70 = hit80 = false;
+    let hit50 = false;
+    let hit60 = false;
+    let hit70 = false;
+    let hit80 = false;
+    let hit90 = false;
+
+    let firstTime10 = firstTime20 = firstTime30 = firstTime40 = true;
+    let hitAgain = true;
     const interval = setInterval(() => {
-        let hitAgain = false;
+        if(!firstTime10)
+            hitAgain = false;
+        
         const timeRemaining = calculateTimeRemaining(endTime);
         console.log(timeRemaining);//60000 / 10 = 54000
         
-        if((percent40 > timeRemaining && hitAgain) || hitAgain){
+        if((percent40 > timeRemaining && firstTime40) || hitAgain){
             console.log("hit40")
+            firstTime40 = false;
             hitAgain = true;
         }
-        if((percent30 > timeRemaining && hitAgain) || hitAgain){
+        if((percent30 > timeRemaining && firstTime30) || hitAgain){
             console.log("hit30")
+            firstTime30 = false;
             hitAgain = true;
         }
-        if((percent20 > timeRemaining && hitAgain) || hitAgain){
+        if((percent20 > timeRemaining && firstTime20) || hitAgain){
             console.log("hit20")
+            firstTime20 = false;
             hitAgain = true;
         }
-        if((percent10 > timeRemaining && hitAgain) || hitAgain){
+        if((percent10 > timeRemaining && firstTime10) || hitAgain){
             //run dom manip
             console.log("hit10")
+            firstTime10 = false;
             hitAgain = true;
         }
             
         //change images to outdoor images
 
         if (percent50 > timeRemaining && !hit50) {
-            alert('50% time passed! Go outside!');
+            // alert('50% time passed! Go outside!');
             hit50 = true;
         }
 
