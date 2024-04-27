@@ -67,7 +67,7 @@
             // alert('50% time passed! Go outside!');
             const newImage = document.querySelectorAll("img");
             for (let i = 0; i < newImage.length; i++) {
-                newImage.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv6zt50rc9YX61OUe9DfmPSh8hgxkDWl6NxqAaaIaZm2e_4hKlL72RIvEIqeskPAkl860&usqp=CAU"; // Replace with your actual image URL
+                newImage[i].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv6zt50rc9YX61OUe9DfmPSh8hgxkDWl6NxqAaaIaZm2e_4hKlL72RIvEIqeskPAkl860&usqp=CAU"; // Replace with your actual image URL
             }
             //document.body.appendChild(newImage);
             hit50 = true;
@@ -76,7 +76,9 @@
         if (percent60 > timeRemaining && !hit60) {
             // alert('60% time passed! Go outside!');
             const allSpan = document.querySelectorAll('span');
-            allSpan.style.color = 'red';
+            for (let i = 0; i < allSpan.length; i++) {
+                allSpan[i].style.color = 'red';
+            };
             hit60 = true;
         }
 
