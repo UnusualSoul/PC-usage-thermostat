@@ -33,9 +33,10 @@
     let firstTime10 = true;
     let firstTime20 = firstTime30 = firstTime40 = hitAgain10 = hitAgain20 = hitAgain30 = hitAgain40 = false;
     let hitAgain = true;
+    const allElements = document.querySelectorAll('*');
     const interval = setInterval(() => {
-        if(!firstTime10)
-            hitAgain = false;
+        // if(!firstTime10)
+        //     hitAgain = false;
         
         const timeRemaining = calculateTimeRemaining(endTime);
         console.log(timeRemaining);//60000 / 10 = 54000
@@ -71,24 +72,31 @@
                 newImage[i].src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv6zt50rc9YX61OUe9DfmPSh8hgxkDWl6NxqAaaIaZm2e_4hKlL72RIvEIqeskPAkl860&usqp=CAU"; // Replace with your actual image URL
             }
             //document.body.appendChild(newImage);
+            alert("Go outside and see all the cute puppies!!")
             hit50 = true;
         }
 
         if (percent60 > timeRemaining && !hit60) {
             // alert('60% time passed! Go outside!');
-            const allElements = document.querySelectorAll('*');
             for (let i = 0; i < allElements.length; i++) {
                 if(allElements[i].innerText)
-                    allElements[i].style.color = "white";
+                    allElements[i].style.color = "pink";
             };
+            alert("Fine Don't go outside, but good luck reading all this white text.")
             hit60 = true;
         }
 
         if (percent70 > timeRemaining && !hit70) {
-            const newMessage = document.createElement("h1");
-            document.body.appendChild(newMessage);
-            newMessage.innerText = "LETS GO OUTSIDEEEEEEE!!!";       
-            console.log(newMessage); 
+            // const newMessage = document.createElement("h1");
+            // document.body.appendChild(newMessage);
+            // newMessage.innerText = "LETS GO OUTSIDEEEEEEE!!!";       
+            // console.log(newMessage); 
+            for (let i = 0; i < allElements.length; i++) {
+                if(allElements[i].innerText)
+                    allElements[i].innerText = 'LETS GO OUTSIDE!!';
+                allElements[i].style.backgroundColor = "pink";
+            };
+            alert("70% time passed!!! STOP browsing!!!");
             hit70 = true;
         }
         
