@@ -7,7 +7,7 @@
     
     const test = document.querySelector("body");
     const h1 = document.createElement("h1");
-    h1.innerText = "LET'S GOOOOOOOOOOOO!!!";
+    h1.innerText = "LETS GOOOOOOOOOOOO!!!";
     h1.appendChild(test);
     console.log('h1.innerText :', h1.innerText);
 
