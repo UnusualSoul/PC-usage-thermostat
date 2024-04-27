@@ -8,13 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let seconds = userInput * 60;
     startCountdown(seconds);
     //const startTime = Date.now() + seconds * 1000;
-    const endTime = addMinutes(seconds);
-    const interval = setInterval(() => {
-      const timeRemaining = calculateTimeRemaining(endTime)
-      console.log(timeRemaining);
-      if(timeRemaining <= 0)
-        clearInterval(interval);
-    }, 500)
+
   });
 
   resetButton.addEventListener('click', function() {
