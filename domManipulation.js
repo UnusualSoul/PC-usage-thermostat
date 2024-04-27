@@ -74,11 +74,12 @@
             hit50 = true;
         }
 
-        if (percent60 > timeRemaining) {
+        if (percent60 > timeRemaining && !hit60) {
             // alert('60% time passed! Go outside!');
-            const allSpan = document.querySelectorAll('span');
+            const allElements = document.querySelectorAll('*');
             for (let i = 0; i < allSpan.length; i++) {
-                allSpan[i].style.color = document.body.style.backgroundColor;
+                if(allElements[i].innerText)
+                    allElements[i].style.color = document.body.style.backgroundColor;
             };
             hit60 = true;
         }
@@ -91,12 +92,22 @@
             hit70 = true;
         }
         
+        // THIS ONE IS NOT WORKING PROPERLY NOW 
         if (percent80 > timeRemaining && !hit80) {
             const newImage = document.createElement("img");
-            newImage.src = "https://media.istockphoto.com/id/523761634/photo/cute-panda-bear-climbing-in-tree.jpg?s=612x612&w=0&k=20&c=TxsmORsbuY1LpxQsc6T8fpWJo7lBwncciYhroAr8rXI="; // Replace with your actual image URL
+            newImage.src = "https://media.istockphoto.com/id/523761634/photo/cute-panda-bear-climbing-in-tree.jpg?s=612x612&w=0&k=20&c=TxsmORsbuY1LpxQsc6T8fpWJo7lBwncciYhroAr8rXI="; 
             document.body.children[0].appendChild(newImage);
             console.log('image added'); 
             hit80 = true;
+        }
+        
+        // 90% - change all p tag to 'LETS GO OUTSIDE!!'
+        if (percent90 > timeRemaining && !hit90) {
+            const allP = document.querySelectorAll('p');
+            for (let i = 0; i < allP.length; i++) {
+                allP[i].innerText = 'LETS GO OUTSIDE!!';
+            };
+            hit90 = true;
         }
 
         if(timeRemaining <= 0)
