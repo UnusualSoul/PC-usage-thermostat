@@ -79,7 +79,7 @@
             const allElements = document.querySelectorAll('*');
             for (let i = 0; i < allElements.length; i++) {
                 if(allElements[i].innerText)
-                    allElements[i].style.color = document.body.style.backgroundColor;
+                    allElements[i].style.color = allElements.parent.style.backgroundColor;
             };
             hit60 = true;
         }
