@@ -11,6 +11,12 @@ const redBar = document.getElementById('red-bar');
 redBar.style.transition = "height " + seconds + "s linear";
 redBar.style.height = whiteSpace.offsetHeight + "px";
 
+//time
+const startTime = Date.now();
+console.log('startTime :', startTime);
+const endTime = Date.now() + minutes;
+console.log('endTime :', endTime);
+
 /*
 //attempt # 2
    const redBar = document.getElementById('red-bar');
