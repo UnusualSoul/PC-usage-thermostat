@@ -25,25 +25,29 @@
     const percent90 = partialTime * 1;
     
     let hit50 = hit60 = false;
-    let hitArr = new Array(9);
-
+    let hitAgain = false;
     const interval = setInterval(() => {
         const timeRemaining = calculateTimeRemaining(endTime);
         console.log(timeRemaining);//60000 / 10 = 54000
-        if(percent10 > timeRemaining){
-            //run dom manip
-        }
-            
-        if(percent20 > timeRemaining){
-            
+        
+        if(percent40 > timeRemaining){
+            console.log("hit40")
+            hitAgain = true;
         }
         if(percent30 > timeRemaining){
-            
+            console.log("hit30")
+            hitAgain = true;
         }
-
-        if(percent40 > timeRemaining){
-            
+        if(percent20 > timeRemaining){
+            console.log("hit20")
+            hitAgain = true;
         }
+        if(percent10 > timeRemaining){
+            //run dom manip
+            console.log("hit10")
+            hitAgain = true;
+        }
+            
         //change images to outdoor images
 
         if (percent50 > timeRemaining && !hit50) {
@@ -56,9 +60,13 @@
             hit60 = true;
         }
 
-        if (percent70 > timeRemaining && !hit50) {
-            
+        if (percent70 > timeRemaining && !hit70) {
+            const newMessage = document.createElement("h1");
+            document.body.appendChild(newMessage);
+            newMessage.innerText = "LETS GO OUTSIDEEEEEEE!!!";       
+            console.log(newMessage); 
         }
+
 
         if(timeRemaining <= 0)
         clearInterval(interval);
