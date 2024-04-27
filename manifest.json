@@ -11,7 +11,7 @@
   },
   "content_scripts": [
     {
-      "js": ["mainScript.js"],
+      "js": ["domManipulation.js"],
       "matches": ["*"]
     }
   ],
