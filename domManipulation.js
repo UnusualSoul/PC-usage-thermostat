@@ -9,7 +9,8 @@
     document.body.appendChild(h1);
     h1.innerText = "LETS GOOOOOOOOOOOO!!!";
     console.log('h1.innerText :', h1.innerText);
-    let seconds = userInput * 60;
+    const userInput = prompt("How many minutes would you like to spend online?", 0.1)
+    let seconds = Number(userInput) * 60;
     const endTime = addMinutes(seconds);
     const fullDuration = calculateTimeRemaining(endTime);
     const partialTime = Math.floor(fullDuration / 10)
