@@ -24,25 +24,25 @@
     const percent80 = partialTime * 2;
     const percent90 = partialTime * 1;
     
-    let hit50 = hit60 = false;
-    let hitAgain = false;
+    let hit50 = hit60 = hit70 = hit80 = false;
     const interval = setInterval(() => {
+        let hitAgain = false;
         const timeRemaining = calculateTimeRemaining(endTime);
         console.log(timeRemaining);//60000 / 10 = 54000
         
-        if(percent40 > timeRemaining){
+        if((percent40 > timeRemaining && hitAgain) || hitAgain){
             console.log("hit40")
             hitAgain = true;
         }
-        if(percent30 > timeRemaining){
+        if((percent30 > timeRemaining && hitAgain) || hitAgain){
             console.log("hit30")
             hitAgain = true;
         }
-        if(percent20 > timeRemaining){
+        if((percent20 > timeRemaining && hitAgain) || hitAgain){
             console.log("hit20")
             hitAgain = true;
         }
-        if(percent10 > timeRemaining){
+        if((percent10 > timeRemaining && hitAgain) || hitAgain){
             //run dom manip
             console.log("hit10")
             hitAgain = true;
@@ -56,7 +56,7 @@
         }
 
         if (percent60 > timeRemaining && !hit60) {
-            alert('60% time passed! Go outside!');
+            // alert('60% time passed! Go outside!');
             hit60 = true;
         }
 
@@ -66,7 +66,13 @@
             newMessage.innerText = "LETS GO OUTSIDEEEEEEE!!!";       
             console.log(newMessage); 
         }
-
+        
+        if (percent80 > timeRemaining && !hit80) {
+            const newImage = document.createElement("img");
+            newImage.src = "https://media.istockphoto.com/id/523761634/photo/cute-panda-bear-climbing-in-tree.jpg?s=612x612&w=0&k=20&c=TxsmORsbuY1LpxQsc6T8fpWJo7lBwncciYhroAr8rXI="; // Replace with your actual image URL
+            document.body.appendChild(newImage);
+            console.log('image added'); 
+        }
 
         if(timeRemaining <= 0)
         clearInterval(interval);
