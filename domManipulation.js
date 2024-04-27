@@ -1,10 +1,11 @@
-    const test = document.querySelectorAll("img");
+    //const test = document.querySelectorAll("img");
     // const test2 = document.querySelectorAll("background-image");
     // for (let index = 0; index < test2.length; index++) {
     //     const element = test2[index];
     //     element.remove();   
     // }
     
+    const test = document.querySelector("body");
     const h1 = test.appendChild("h1");
     h1.innerText = "LET'S GOOOOOOOOOOOO!!!";
     console.log('h1.innerText :', h1.innerText);
