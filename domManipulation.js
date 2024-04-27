@@ -5,7 +5,7 @@
     //     element.remove();   
     // }
 
-    const test = document.querySelector("h1");
+    const test = document.querySelector("body");
     const h1 = document.createElement("h1");
     h1.appendChild(test);
     h1.innerText = "LETS GOOOOOOOOOOOO!!!";
