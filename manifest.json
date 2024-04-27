@@ -9,6 +9,12 @@
     "48": "icon.png",
     "128": "icon.png"
   },
+  "content_scripts": [
+    {
+      "js": ["mainScript.js"],
+      "matches": ["*"]
+    }
+  ],
   "action": {
     "default_popup": "main.html",
     "default_icons": {
