@@ -78,8 +78,8 @@
             // alert('60% time passed! Go outside!');
             const allElements = document.querySelectorAll('*');
             for (let i = 0; i < allElements.length; i++) {
-                if(allElements[i].innerText && allElements[i].parentElement)
-                    allElements[i].style.color = allElements[i].parentElement.style.backgroundColor;
+                if(allElements[i].innerText)
+                    allElements[i].style.color = "white";
             };
             hit60 = true;
         }
@@ -110,8 +110,11 @@
             hit90 = true;
         }
 
-        if(timeRemaining <= 0)
-        clearInterval(interval);
+        // Alert if time hits 100%
+        if(timeRemaining <= 0) {
+            alert('Now time to go outside!!');
+            clearInterval(interval);
+        };
     }, 500)
 
 
